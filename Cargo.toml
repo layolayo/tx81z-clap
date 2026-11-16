@@ -1,0 +1,20 @@
+[package]
+name = "tx81z-clap"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "CLAP plugin for controlling every parameter of the Yamaha TX81Z via MIDI SysEx"
+
+[workspace]
+members = ["xtask"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+midir = "0.10"
+crossbeam-channel = "0.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
